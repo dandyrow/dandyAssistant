@@ -3,6 +3,7 @@
 import struct
 import pyaudio
 import pvporcupine
+import tts
 
 porcupine = None
 pa = None
@@ -29,6 +30,7 @@ try:
 
         if keyword_index >= 0:
             print ("Hotword Detected")
+            tts.say("Hello Daniel", lang='en-GB')
 
 finally:
     if porcupine is not None:
